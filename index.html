@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Навчальна вебсторінка до лабораторної роботи №1 з веброзробки."
+    />
+    <title>Лабораторна №1 — Веброзробка</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <div class="page">
+      <header class="site-header">
+        <a class="logo" href="#home" aria-label="На початок сторінки">WEB<span>LAB</span></a>
+        <span class="lab-number">Лабораторна №01</span>
+      </header>
+
+      <main id="home">
+        <section class="hero" aria-labelledby="page-title">
+          <p class="eyebrow">Перший крок у веброзробці</p>
+          <h1 id="page-title">Моя перша<br /><span>вебсторінка.</span></h1>
+          <p class="intro">
+            Тут я вчуся створювати структуру сторінки, оформлювати її та додавати інтерактивність за
+            допомогою HTML, CSS і JavaScript.
+          </p>
+          <button id="theme-button" type="button" aria-pressed="false">Темна тема</button>
+          <p id="theme-status" class="theme-status" role="status">Зараз увімкнено світлу тему.</p>
+        </section>
+
+        <section class="about" aria-labelledby="about-title">
+          <p class="eyebrow">Про роботу</p>
+          <h2 id="about-title">Три складові однієї сторінки</h2>
+          <p>
+            Мета лабораторної — налаштувати середовище розробки та пройти шлях від коду до
+            публікації сайту.
+          </p>
+          <div class="technology-grid">
+            <article class="technology">
+              <span class="technology-number" aria-hidden="true">01</span>
+              <h3>HTML</h3>
+              <p>Створює структуру: заголовки, текст, розділи та кнопки.</p>
+            </article>
+            <article class="technology">
+              <span class="technology-number" aria-hidden="true">02</span>
+              <h3>CSS</h3>
+              <p>Визначає кольори, розміри й розташування елементів.</p>
+            </article>
+            <article class="technology">
+              <span class="technology-number" aria-hidden="true">03</span>
+              <h3>JavaScript</h3>
+              <p>Додає поведінку: наприклад, перемикає тему цієї сторінки.</p>
+            </article>
+          </div>
+        </section>
+      </main>
+
+      <footer class="site-footer">
+        <span>Веброзробка · 2026</span>
+        <span>Лабораторна робота №1</span>
+      </footer>
+    </div>
+  </body>
+</html>
