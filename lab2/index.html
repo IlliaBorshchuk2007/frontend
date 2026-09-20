@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Laboratory Work 2 - CSS</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <header class="header">
+        <h1>CSS Fundamentals</h1>
+        <p>Laboratory Work №2</p>
+    </header>
+
+
+    <main class="container">
+
+        <section class="card">
+            <h2>Box Model</h2>
+
+            <p>
+                CSS Box Model визначає, як формується
+                розмір елемента.
+            </p>
+
+            <button class="btn btn-primary">
+                Learn more
+            </button>
+        </section>
+
+
+        <section class="card">
+            <h2>Cascade & Specificity</h2>
+
+            <p>
+                Cascade та Specificity визначають,
+                яке CSS-правило буде застосовано.
+            </p>
+
+            <button class="btn btn-outline">
+                Details
+            </button>
+        </section>
+
+
+        <section class="card dark-card">
+            <h2>CSS Variables</h2>
+
+            <p>
+                CSS Variables дозволяють створювати
+                повторно використовувані значення.
+            </p>
+
+            <button class="btn btn-primary">
+                Explore
+            </button>
+        </section>
+
+    </main>
+
+
+    <section class="box-model-demo">
+
+        <h2>Box Model Experiment</h2>
+
+        <div class="box-container">
+
+            <div class="box content-box">
+                <h3>content-box</h3>
+                <p>Width: 200px</p>
+                <p>Height: 150px</p>
+            </div>
+
+            <div class="box border-box">
+                <h3>border-box</h3>
+                <p>Width: 200px</p>
+                <p>Height: 150px</p>
+            </div>
+
+        </div>
+
+
+        <div class="experiment">
+
+            <h2>Cascade Experiment</h2>
+
+            <p class="cascade-text">
+                This text is used to demonstrate CSS Cascade.
+            </p>
+
+        </div>
+
+
+        <div class="experiment">
+
+            <h2>Specificity Experiment</h2>
+
+            <p
+                id="specificity-text"
+                class="specificity-text test-one test-two test-three">
+                This text is used to demonstrate CSS Specificity.
+            </p>
+
+        </div>
+
+
+        <div class="inheritance-demo">
+
+            <h2>Inheritance Experiment</h2>
+
+            <p>
+                This paragraph inherits font and color from its parent.
+            </p>
+
+            <a href="#">
+                This link demonstrates inheritance.
+            </a>
+
+            <button class="inherit-button">
+                Inherit Button
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <footer class="footer">
+        <p>Laboratory Work №2</p>
+    </footer>
+
+</body>
+
+</html>
