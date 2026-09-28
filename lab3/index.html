@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>CSS Fundamentals - Laboratory Work 3</title>
+
+    <meta
+        name="description"
+        content="A practical laboratory work demonstrating CSS fundamentals, Box Model, Cascade, Specificity, Inheritance and CSS Variables."
+    >
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <header class="header">
+
+        <nav aria-label="Main navigation">
+            <a href="#fundamentals">CSS Fundamentals</a>
+            <a href="#experiments">Experiments</a>
+        </nav>
+
+        <h1>CSS Fundamentals</h1>
+
+        <p>
+            Laboratory Work №3: Semantic HTML and SEO
+        </p>
+
+    </header>
+
+
+    <main>
+
+        <!-- CSS Fundamentals -->
+
+        <section
+            id="fundamentals"
+            class="container"
+            aria-labelledby="fundamentals-title"
+        >
+
+            <h2 id="fundamentals-title">
+                CSS Fundamentals
+            </h2>
+
+
+            <article class="card">
+
+                <h3>Box Model</h3>
+
+                <p>
+                    The CSS Box Model describes how the size of an
+                    HTML element is calculated using content, padding,
+                    border and margin.
+                </p>
+
+                <a class="btn btn-primary" href="#box-model">
+                    Learn about Box Model
+                </a>
+
+            </article>
+
+
+            <article class="card">
+
+                <h3>Cascade &amp; Specificity</h3>
+
+                <p>
+                    CSS Cascade and Specificity determine which
+                    CSS rule is applied when several rules target
+                    the same element.
+                </p>
+
+                <a class="btn btn-outline" href="#cascade">
+                    View Cascade Experiment
+                </a>
+
+            </article>
+
+
+            <article class="card dark-card">
+
+                <h3>CSS Variables</h3>
+
+                <p>
+                    CSS Variables allow reusable values to be
+                    defined once and used in different parts
+                    of a stylesheet.
+                </p>
+
+                <a class="btn btn-primary" href="#variables">
+                    Explore CSS Variables
+                </a>
+
+            </article>
+
+        </section>
+
+
+        <!-- Experiments -->
+
+        <section
+            id="experiments"
+            class="box-model-demo"
+            aria-labelledby="experiments-title"
+        >
+
+            <h2 id="experiments-title">
+                CSS Experiments
+            </h2>
+
+
+            <!-- Box Model -->
+
+            <section
+                id="box-model"
+                class="experiment"
+                aria-labelledby="box-model-title"
+            >
+
+                <h2 id="box-model-title">
+                    Box Model Experiment
+                </h2>
+
+                <div class="box-container">
+
+                    <article class="box content-box">
+
+                        <h3>content-box</h3>
+
+                        <p>
+                            Width: 200px
+                        </p>
+
+                        <p>
+                            Height: 150px
+                        </p>
+
+                    </article>
+
+
+                    <article class="box border-box">
+
+                        <h3>border-box</h3>
+
+                        <p>
+                            Width: 200px
+                        </p>
+
+                        <p>
+                            Height: 150px
+                        </p>
+
+                    </article>
+
+                </div>
+
+            </section>
+
+
+            <!-- Cascade -->
+
+            <section
+                id="cascade"
+                class="experiment"
+                aria-labelledby="cascade-title"
+            >
+
+                <h2 id="cascade-title">
+                    Cascade Experiment
+                </h2>
+
+                <p class="cascade-text">
+                    This text demonstrates how the CSS Cascade
+                    determines which rule is applied.
+                </p>
+
+            </section>
+
+
+            <!-- Specificity -->
+
+            <section
+                class="experiment"
+                aria-labelledby="specificity-title"
+            >
+
+                <h2 id="specificity-title">
+                    Specificity Experiment
+                </h2>
+
+                <p
+                    id="specificity-text"
+                    class="specificity-text test-one test-two test-three"
+                >
+                    This text demonstrates CSS Specificity
+                    and selector priority.
+                </p>
+
+            </section>
+
+
+            <!-- Inheritance -->
+
+            <section
+                class="inheritance-demo"
+                aria-labelledby="inheritance-title"
+            >
+
+                <h2 id="inheritance-title">
+                    Inheritance Experiment
+                </h2>
+
+                <p>
+                    This paragraph inherits font and color
+                    properties from its parent element.
+                </p>
+
+                <a href="#inheritance-title">
+                    View inheritance section
+                </a>
+
+                <button
+                    type="button"
+                    class="inherit-button"
+                >
+                    Inherit Button
+                </button>
+
+            </section>
+
+
+            <!-- CSS Variables -->
+
+            <section
+                id="variables"
+                class="experiment"
+                aria-labelledby="variables-title"
+            >
+
+                <h2 id="variables-title">
+                    CSS Variables
+                </h2>
+
+                <p>
+                    CSS Variables make it possible to store
+                    reusable values and apply them consistently
+                    throughout the page.
+                </p>
+
+            </section>
+
+        </section>
+
+    </main>
+
+
+    <footer class="footer">
+
+        <p>
+            Laboratory Work №3 — Semantic HTML and SEO
+        </p>
+
+    </footer>
+
+</body>
+
+</html>
