@@ -52,14 +52,13 @@ form.addEventListener('submit', () => {
 
 /* Booking */
 
-function bindBookButtons() {
-  document.querySelectorAll('.venue-card__book').forEach((button) => {
-    button.addEventListener('click', () => {
-      const venue = venues.find((item) => item.id === button.dataset.id);
-      openBooking(venue, form.date.value || toISODate(new Date()));
-    });
-  });
-}
+results.addEventListener('click', (event) => {
+  if (!(event.target instanceof Element)) return;
+  const button = event.target.closest('.venue-card__book');
+  if (!button || !results.contains(button)) return;
+  const venue = venues.find((item) => item.id === button.dataset.id);
+  openBooking(venue, form.date.value || toISODate(new Date()));
+});
 
 /* Initial state: popular venues */
 
@@ -67,4 +66,3 @@ venues = await fetchVenues({ popular: true });
 renderResults(results, venues);
 results.setAttribute('aria-busy', 'false');
 status.textContent = `Популярні майданчики: ${venues.length}`;
-bindBookButtons();
