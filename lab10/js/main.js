@@ -11,6 +11,7 @@ const status = document.getElementById('status');
 
 // Venues currently on screen
 let venues = [];
+let latestRequest = 0;
 
 /* Mobile menu */
 
@@ -33,10 +34,12 @@ function readFilters() {
 
 async function handleSearch(event) {
   event.preventDefault();
+  const requestId = ++latestRequest;
   status.textContent = 'Шукаємо…';
   results.setAttribute('aria-busy', 'true');
 
   const found = await fetchVenues(readFilters());
+  if (requestId !== latestRequest) return;
   renderResults(results, found);
   venues = found;
   status.textContent = found.length ? `Знайдено: ${found.length}` : 'Нічого не знайдено';
@@ -57,7 +60,11 @@ results.addEventListener('click', (event) => {
 
 /* Initial state: popular venues */
 
-venues = await fetchVenues({ popular: true });
-renderResults(results, venues);
-results.setAttribute('aria-busy', 'false');
-status.textContent = `Популярні майданчики: ${venues.length}`;
+const initialRequest = ++latestRequest;
+const popular = await fetchVenues({ popular: true });
+if (initialRequest === latestRequest) {
+  venues = popular;
+  renderResults(results, venues);
+  results.setAttribute('aria-busy', 'false');
+  status.textContent = `Популярні майданчики: ${venues.length}`;
+}
